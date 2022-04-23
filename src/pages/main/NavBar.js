@@ -153,11 +153,11 @@ const NavBar = () => {
               <p>Cryptoguarantee</p>
             </Link>
             <button
-              className="navbar-clos"
+              className="navbar-clos cursor-pointer hover:border-red-400 rounded p-2 border-none hover:border-solid border-2"
               onClick={() => setOpenSidebar(false)}
             >
               <svg
-                className="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500"
+                className="h-6 w-6  text-gray-400 "
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
@@ -176,7 +176,7 @@ const NavBar = () => {
             <ul>
               <li className="mb-1">
                 <Link
-                  className="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
+                  className="block p-4 text-sm font-semibold text-gray-400 hover:hover:bg-blue-700 hover:text-blue-50 rounded"
                   to="/"
                 >
                   Home
@@ -184,7 +184,7 @@ const NavBar = () => {
               </li>
               <li className="mb-1">
                 <Link
-                  className="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
+                  className="block p-4 text-sm font-semibold text-gray-400 hover:hover:bg-blue-700 hover:text-blue-50 rounded"
                   to="/about"
                 >
                   About Us
@@ -192,7 +192,7 @@ const NavBar = () => {
               </li>
               <li className="mb-1">
                 <Link
-                  className="active:text-blue-500 block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
+                  className="active:text-blue-500 block p-4 text-sm font-semibold text-gray-400 hover:hover:bg-blue-700 hover:text-blue-50 rounded"
                   to="/pricing"
                 >
                   Pricing
@@ -201,7 +201,7 @@ const NavBar = () => {
 
               <li className="mb-1">
                 <Link
-                  className="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
+                  className="block p-4 text-sm font-semibold text-gray-400 hover:hover:bg-blue-700 hover:text-blue-50 rounded"
                   to="/team"
                 >
                   Team
@@ -209,7 +209,7 @@ const NavBar = () => {
               </li>
               <li className="mb-1">
                 <Link
-                  className="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
+                  className="block p-4 text-sm font-semibold text-gray-400 hover:hover:bg-blue-700 hover:text-blue-50 rounded"
                   to="/contact"
                 >
                   Contact
@@ -220,15 +220,12 @@ const NavBar = () => {
           <div className="mt-auto">
             <div className="pt-6">
               <Link
-                className="block px-4 py-3 mb-3 leading-loose text-xs text-center font-semibold  bg-gray-50 hover:bg-gray-100 rounded-xl"
+                className="block px-4 py-4 mb-2 leading-loose text-xs text-center text-white font-semibold bg-blue-600 hover:bg-blue-700  rounded-full"
                 to="/login"
               >
                 Sign in
               </Link>
-              <Link
-                className="block px-4 py-3 mb-2 leading-loose text-xs text-center text-white font-semibold bg-blue-600 hover:bg-blue-700  rounded-xl"
-                to="/register"
-              >
+              <Link className=" more-btn w-full mt-4" to="/register">
                 Sign Up
               </Link>
             </div>

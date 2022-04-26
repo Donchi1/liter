@@ -24,7 +24,7 @@ export const UserEdit = (props) => (
       <TextInput source="email" />
       <TextInput source="age" />
       <TextInput source="totalBalance" />
-      <TextInput source="initialDeposite" />
+
       <TextInput source="initialDeposite" />
       <TextInput source="profit" />
       <TextInput source="gender" />

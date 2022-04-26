@@ -1,8 +1,11 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { useSelector } from 'react-redux'
+import { isLoaded, isEmpty } from 'react-redux-firebase'
 import img from '../../assets/img/logo.png'
 
 const NavBar = () => {
+  const authState = useSelector((state) => state.firebase.auth)
   const [openSidebar, setOpenSidebar] = useState(false)
   return (
     <>
@@ -121,18 +124,29 @@ const NavBar = () => {
             </Link>
           </li>
         </ul>
-        <Link
-          className="hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-6 bg-gray-50 hover:bg-gray-100 text-sm text-gray-900 font-bold  rounded-xl transition duration-200"
-          to="/login"
-        >
-          Sign In
-        </Link>
-        <Link
-          className="hidden lg:inline-block py-2 px-6 bg-blue-500 hover:bg-blue-600 text-sm text-white font-bold rounded-xl transition duration-200"
-          to="/register"
-        >
-          Sign up
-        </Link>
+        {isLoaded(authState) && !isEmpty(authState) ? (
+          <Link
+            className="hidden lg:inline-block py-2 px-6 bg-blue-500 hover:bg-blue-600 text-sm text-white font-bold rounded-xl transition duration-200"
+            to="/user/dashbord"
+          >
+            Dashboard
+          </Link>
+        ) : (
+          <>
+            <Link
+              className="hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-6 bg-gray-50 hover:bg-gray-100 text-sm text-gray-900 font-bold  rounded-xl transition duration-200"
+              to=" /login"
+            >
+              Sign In
+            </Link>
+            <Link
+              className="hidden lg:inline-block py-2 px-6 bg-blue-500 hover:bg-blue-600 text-sm text-white font-bold rounded-xl transition duration-200"
+              to="/register"
+            >
+              Sign up
+            </Link>
+          </>
+        )}
       </nav>
       <div
         className={`navbar-men relative z-50 ${
@@ -219,15 +233,23 @@ const NavBar = () => {
           </div>
           <div className="mt-auto">
             <div className="pt-6">
-              <Link
-                className="block px-4 py-4 mb-2 leading-loose text-xs text-center text-white font-semibold bg-blue-600 hover:bg-blue-700  rounded-full"
-                to="/login"
-              >
-                Sign in
-              </Link>
-              <Link className=" more-btn w-full mt-4" to="/register">
-                Sign Up
-              </Link>
+              {isLoaded(authState) && !isEmpty(authState) ? (
+                <Link className=" more-btn w-full mt-4" to="/user/dashboard">
+                  Dashboard
+                </Link>
+              ) : (
+                <>
+                  <Link
+                    className="block px-4 py-4 mb-2 leading-loose text-xs text-center text-white font-semibold bg-blue-600 hover:bg-blue-700  rounded-full"
+                    to="/login"
+                  >
+                    Sign in
+                  </Link>
+                  <Link className=" more-btn w-full mt-4" to="/register">
+                    Sign Up
+                  </Link>
+                </>
+              )}
             </div>
             <p className="my-4 text-xs text-center text-gray-400">
               <span>Copyright © {new Date().getFullYear()}</span>

@@ -51,42 +51,28 @@ export const registerAction = (data, firebase, dispatch, setuserData) => {
                     .doc(user.user.uid)
                     .update({ photo: url })
                     .then(() => {
+                      setuserData({
+                        ...data,
+                        firstname: '',
+                        lastname: '',
+                        email: '',
+                        password1: '',
+                        password2: '',
+                        phone: '',
+                        country: '',
+                        photo: '',
+                        state: '',
+                        occupation: '',
+                        textChange: 'Sign Up',
+                      })
+                      dispatch({
+                        type: 'SIGNUP_SUCCESS',
+                        message: 'Registration successful',
+                      })
                       axios
                         .post(`${process.env.REACT_APP_APIURL}/welcome`, user)
                         .then(() => {
-                          setuserData({
-                            ...data,
-                            firstname: '',
-                            lastname: '',
-                            email: '',
-                            password: '',
-                            phone: '',
-                            country: '',
-                            photo: '',
-                            textChange: 'Sign Up',
-                          })
-                          return dispatch({
-                            type: 'SIGNUP_SUCCESS',
-                            message: 'Registration successful',
-                          })
-                        })
-                        .catch((error) => {
-                          setuserData({
-                            ...data,
-                            firstname: '',
-                            lastname: '',
-                            email: '',
-                            password: '',
-                            phone: '',
-                            country: '',
-                            photo: '',
-                            textChange: 'Sign Up',
-                          })
-                          return dispatch({
-                            type: 'SIGNUP_SUCCESS',
-                            message:
-                              'Registration successful. We couldnt proccess an email notification please check your email address',
-                          })
+                          console.log('Sent')
                         })
                     })
                     .catch((err) => {
@@ -95,13 +81,16 @@ export const registerAction = (data, firebase, dispatch, setuserData) => {
                         firstname: '',
                         lastname: '',
                         email: '',
-                        password: '',
+                        password1: '',
+                        password2: '',
                         phone: '',
                         country: '',
                         photo: '',
+                        state: '',
+                        occupation: '',
                         textChange: 'Sign Up',
                       })
-                      dispatch({ type: 'SIGNUP_ERROR', error: err })
+                      dispatch({ type: 'SIGNUP_ERROR', message: err })
                     })
                 })
             })
@@ -112,13 +101,16 @@ export const registerAction = (data, firebase, dispatch, setuserData) => {
             firstname: '',
             lastname: '',
             email: '',
-            password: '',
+            password1: '',
+            password2: '',
             phone: '',
             country: '',
             photo: '',
+            state: '',
+            occupation: '',
             textChange: 'Sign Up',
           })
-          dispatch({ type: 'SIGNUP_ERROR', error: err })
+          dispatch({ type: 'SIGNUP_ERROR', message: err })
         })
     })
     .catch((err) => {
@@ -127,13 +119,16 @@ export const registerAction = (data, firebase, dispatch, setuserData) => {
         firstname: '',
         lastname: '',
         email: '',
-        password: '',
+        password1: '',
+        password2: '',
         phone: '',
         country: '',
+        state: '',
+        occupation: '',
         photo: '',
         textChange: 'Sign Up',
       })
-      dispatch({ type: 'SIGNUP_ERROR', error: err })
+      return dispatch({ type: 'SIGNUP_ERROR', message: err })
     })
 }
 

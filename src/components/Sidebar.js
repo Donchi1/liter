@@ -71,7 +71,7 @@ export default function Sidebar() {
         accessCodeInfo={accessCodeInfo}
       />
       <div
-        className={`h-screen  fixed top-0 md:left-0 ${showSidebar} overflow-y-auto flex-row flex-nowrap overflow-hidden shadow-xl bg-[#ffffff0d]  w-60 z-10 text-white py-4 px-6 transition-all duration-300`}
+        className={`h-screen  fixed top-0 md:left-0 ${showSidebar} overflow-y-auto flex-row flex-nowrap overflow-hidden shadow-xl lg:bg-[#ffffff0d] bg-[#030239]  w-60 z-10 text-white py-4 px-6 transition-all duration-300`}
       >
         <div className="flex-col items-stretch min-h-full flex-nowrap px-0 relative">
           <a

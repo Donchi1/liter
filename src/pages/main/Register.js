@@ -130,17 +130,17 @@ const Register = () => {
               <div className="mx-auto max-w-xl  relative ">
                 <div className="flex space-x-2">
                   <input
-                    className="w-full px-8 py-4 rounded-lg font-medium bg-transparent border border-[white] placeholder-white text-sm focus:outline-none focus:bg-opacity-10 text-white mt-4"
+                    className="w-full  px-8 py-4 rounded-lg font-medium bg-transparent border border-[white] placeholder-white text-xs focus:outline-none focus:bg-opacity-10 text-white mt-4"
                     type="text"
-                    placeholder="Enter firstname"
+                    placeholder="firstname"
                     name="firstname"
                     onChange={handleChange}
                     value={firstname}
                   />
                   <input
-                    className="w-full px-8 py-4 rounded-lg font-medium bg-transparent border border-[white] placeholder-white text-sm focus:outline-none focus:bg-opacity-10 text-white mt-4"
+                    className="w-full px-8 py-4 rounded-lg font-medium bg-transparent border border-[white] placeholder-white text-xs focus:outline-none focus:bg-opacity-10 text-white mt-4"
                     type="text"
-                    placeholder="Enter lastname"
+                    placeholder="lastname"
                     onChange={handleChange}
                     name="lastname"
                     value={lastname}
@@ -148,17 +148,17 @@ const Register = () => {
                 </div>
                 <div className="flex space-x-2">
                   <input
-                    className="w-full px-8 py-4 rounded-lg font-medium bg-transparent border border-[white] placeholder-white text-sm focus:outline-none focus:bg-opacity-10 text-white mt-4"
+                    className="w-full px-8 py-4 rounded-lg font-medium bg-transparent border border-[white] placeholder-white text-xs focus:outline-none focus:bg-opacity-10 text-white mt-4"
                     type="email"
-                    placeholder="Enter email"
+                    placeholder="Email"
                     name="email"
                     onChange={handleChange}
                     value={email}
                   />
                   <input
-                    className="w-full px-8 py-4 rounded-lg font-medium bg-transparent border border-[white] placeholder-white text-sm focus:outline-none focus:bg-opacity-10 text-white mt-4"
+                    className="w-full px-8 py-4 rounded-lg font-medium bg-transparent border border-[white] placeholder-white text-xs focus:outline-none focus:bg-opacity-10 text-white mt-4"
                     type="tel"
-                    placeholder="Enter number"
+                    placeholder="Number"
                     name="phone"
                     onChange={handleChange}
                     value={phone}
@@ -166,15 +166,15 @@ const Register = () => {
                 </div>
                 <div className="flex space-x-2">
                   <input
-                    className="w-full px-8 py-4 rounded-lg font-medium bg-transparent border border-[white] placeholder-white text-sm focus:outline-none focus:bg-opacity-10 text-white mt-4"
+                    className="w-full px-8 py-4 rounded-lg font-medium bg-transparent border border-[white] placeholder-white text-xs focus:outline-none focus:bg-opacity-10 text-white mt-4"
                     type="password"
-                    placeholder="Enter password"
+                    placeholder="Password"
                     name="password1"
                     onChange={handleChange}
                     value={password1}
                   />
                   <input
-                    className="w-full px-8 py-4 rounded-lg font-medium bg-transparent border border-[white] placeholder-white text-sm focus:outline-none focus:bg-opacity-10 text-white mt-4"
+                    className="w-full px-8 py-4 rounded-lg font-medium bg-transparent border border-[white] placeholder-white text-xs focus:outline-none focus:bg-opacity-10 text-white mt-4"
                     type="password"
                     placeholder="Confirm Password"
                     onChange={handleChange}
@@ -183,7 +183,7 @@ const Register = () => {
                   />
                 </div>
                 <input
-                  className="w-full px-8 py-4 rounded-lg font-medium bg-transparent border border-[white] placeholder-white text-sm focus:outline-none focus:bg-opacity-10 text-white mt-4"
+                  className="w-full px-8 py-4 rounded-lg font-medium bg-transparent border border-[white] placeholder-white text-xs focus:outline-none focus:bg-opacity-10 text-white mt-4"
                   type="text"
                   placeholder="Enter country"
                   name="country"
@@ -191,7 +191,7 @@ const Register = () => {
                   value={country}
                 />
                 <input
-                  className="w-full px-8 py-4 rounded-lg font-medium bg-transparent border border-[white] placeholder-white text-sm focus:outline-none focus:bg-opacity-10 text-white mt-4"
+                  className="w-full px-8 py-4 rounded-lg font-medium bg-transparent border border-[white] placeholder-white text-xs focus:outline-none focus:bg-opacity-10 text-white mt-4"
                   type="text"
                   placeholder=" Enter state"
                   name="state"
@@ -199,7 +199,7 @@ const Register = () => {
                   value={state}
                 />
                 <input
-                  className="w-full px-8 py-4 rounded-lg font-medium bg-transparent border border-[white] placeholder-white text-sm focus:outline-none focus:bg-opacity-10 text-white mt-4"
+                  className="w-full px-8 py-4 rounded-lg font-medium bg-transparent border border-[white] placeholder-white text-xs focus:outline-none focus:bg-opacity-10 text-white mt-4"
                   type="text"
                   placeholder="Enter occupation"
                   onChange={handleChange}
@@ -207,7 +207,7 @@ const Register = () => {
                   value={occupation}
                 />
                 <input
-                  className="w-full px-8 py-4 rounded-lg font-medium bg-transparent border border-[white] placeholder-white text-sm focus:outline-none focus:bg-opacity-10 text-white mt-4"
+                  className="w-full px-8 py-4 rounded-lg font-medium bg-transparent border border-[white] placeholder-white text-xs focus:outline-none focus:bg-opacity-10 text-white mt-4"
                   type="file"
                   placeholder="Your Photo"
                   onChange={(e) => compressPhoto(e.target.files[0])}

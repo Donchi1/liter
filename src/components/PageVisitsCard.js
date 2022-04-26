@@ -13,7 +13,7 @@ export default function PageVisitsCard({ withdrawals, payments }) {
         <div className="w-full flex items-center justify-between mt-4">
           <h2 className=" gradient-text  text-2xl">Transaction History</h2>
           <button
-            className="bg-gradient-to-tr from-[#846ff4] to-[#f17674] py-4 px-6 rounded-full"
+            className="bg-gradient-to-tr from-[#846ff4] to-[#f17674] py-2 px-4 rounded-full"
             onClick={() => push('/user/history')}
           >
             See More

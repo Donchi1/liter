@@ -398,8 +398,8 @@ const Footer = () => {
                     data-wow-delay="0.4s"
                   >
                     <h5>CONTACT US</h5>
-                    <p>Mailing Address:xx00 E. Union Ave</p>
-                    <p>Suite 1100. Denver, CO 80237</p>
+                    <p>Address:No 345 Street</p>
+                    <p>Bristol England United Kingdom</p>
                     <p>
                       Whatsapp:{' '}
                       <a href="https://wa.me/+443567647896">+443567647896</a>

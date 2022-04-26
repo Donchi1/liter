@@ -311,9 +311,9 @@ export default function Contact() {
                         </Link>
                       </div>
                       <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit. Velit ducimus voluptatibus neque illo id repellat
-                        quisquam? Autem expedita earum quae laborum ipsum ad.
+                        We are out to give you the best of our services in
+                        crypto trading and investment.Our clients satisfaction
+                        is our priority .
                       </p>
                     </div>
                     {/* Social Icon */}
@@ -341,34 +341,7 @@ export default function Contact() {
                   </div>
                 </div>
 
-                <div className="w-full lg:w-1/5 pr-4 pl-4 md:w-1/2 ">
-                  <div className="contact_info_area sm:flex justify-between">
-                    {/* Content Info */}
-                    <div
-                      className="contact_info mt-x text-center fadeInUp"
-                      data-wow-delay="0.3s"
-                    >
-                      <h5>PRIVACY & TOS</h5>
-                      <Link to="#">
-                        <p>Advertiser Agreement</p>
-                      </Link>
-                      <Link to="#">
-                        <p>Acceptable Use Policy</p>
-                      </Link>
-                      <Link to="#">
-                        <p>Privacy Policy</p>
-                      </Link>
-                      <Link to="#">
-                        <p>Technology Privacy</p>
-                      </Link>
-                      <Link to="#">
-                        <p>Developer Agreement</p>
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="w-full lg:w-1/5 pr-4 pl-4 md:w-1/2 pr-4 pl-4 ">
+                <div className="w-full lg:w-1/5 pr-4 pl-4 md:w-1/2  ">
                   {/* Content Info */}
                   <div className="contact_info_area sm:flex justify-between">
                     <div
@@ -376,20 +349,26 @@ export default function Contact() {
                       data-wow-delay="0.2s"
                     >
                       <h5>NAVIGATE</h5>
-                      <Link to="#">
-                        <p>Advertisers</p>
+                      <Link to="/">
+                        <p>Home</p>
                       </Link>
-                      <Link to="#">
-                        <p>Developers</p>
+                      <Link to="/about">
+                        <p>About</p>
                       </Link>
-                      <Link to="#">
-                        <p>Resources</p>
+                      <Link to="/team">
+                        <p>Team</p>
                       </Link>
-                      <Link to="#">
-                        <p>Company</p>
+                      <Link to="/contact">
+                        <p>Contact</p>
                       </Link>
-                      <Link to="#">
-                        <p>Connect</p>
+                      <Link to="/pricing">
+                        <p>Pricing</p>
+                      </Link>
+                      <Link to="/login">
+                        <p>login</p>
+                      </Link>
+                      <Link to="/register">
+                        <p>Register</p>
                       </Link>
                     </div>
                   </div>
@@ -403,10 +382,17 @@ export default function Contact() {
                       data-wow-delay="0.4s"
                     >
                       <h5>CONTACT US</h5>
-                      <p>Mailing Address:xx00 E. Union Ave</p>
-                      <p>Suite 1100. Denver, CO 80237</p>
-                      <p>+999 90932 627</p>
-                      <p>support@yourdomain.com</p>
+                      <p>Address:No 345 Street</p>
+                      <p>Bristol England United Kingdom</p>
+                      <p>
+                        Whatsapp:{' '}
+                        <a href="https://wa.me/+443567647896">+443567647896</a>
+                      </p>
+                      <p>
+                        Whatsapp:{' '}
+                        <a href="https://wa.me/+12046022485">+12046022485</a>{' '}
+                      </p>
+                      <p>support@cryptoguarantee.com</p>
                     </div>
                   </div>
                 </div>

@@ -31,7 +31,7 @@ export default function SettingsForm({ profileInfo }) {
     phone: profileInfo?.phone,
     postalCode: profileInfo?.postalCode,
     city: profileInfo.city,
-    img: '',
+    img: profileInfo.photo,
     address: profileInfo.address,
 
     profileIsSubmitting: false,

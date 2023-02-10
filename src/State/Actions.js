@@ -194,7 +194,6 @@ export const updateProfileAction = (profile, firebase, dispatch, setForm) => {
       initial: userInitial.toString(),
     })
     .then(() => {
-      if (profile.img) {
         return firebase
           .storage()
           .ref('users')
@@ -211,12 +210,12 @@ export const updateProfileAction = (profile, firebase, dispatch, setForm) => {
                   .collection('users')
                   .doc(uid)
                   .update({ photo: imgUrl })
-                  .then(() => {
-                    axios
-                      .post(
-                        `${process.env.REACT_APP_APIURL}/api/profileUpdate`,
-                        profile,
-                      )
+                 
+                    // axios
+                    //   .post(
+                    //     `${process.env.REACT_APP_APIURL}/api/profileUpdate`,
+                    //     profile,
+                    //   )
                       .then(() => {
                         dispatch({
                           type: 'PROFILE_UPLOAD_SUCCESS',
@@ -240,27 +239,10 @@ export const updateProfileAction = (profile, firebase, dispatch, setForm) => {
                           isSubmitting: false,
                         })
                       })
-                  })
+                  
               }),
           )
-      } else {
-        dispatch({
-          type: 'PROFILE_UPLOAD_SUCCESS',
-          message: 'Profile Successfully Updated',
-        })
-
-        return setForm({
-          ...profile,
-
-          profileIsSubmitting: false,
-        })
-        //return axios
-        //  .post(
-        //    `${process.env.REACT_APP_URL}/api/profileUpdate`,
-        //    firebase.auth().currentUser.uid,
-        //  )
-        //  .then((res) => {})
-      }
+     
     })
     .catch(() => {
       dispatch({

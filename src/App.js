@@ -23,6 +23,7 @@ import Plans from './pages/Plans'
 // Tailwind CSS Style Sheet
 import 'assets/styles/tailwind.css'
 import NavBar from 'pages/main/NavBar'
+import Verify from 'pages/main/Verify'
 
 function App() {
   const authState = useSelector((state) => state.firebase.auth)
@@ -44,6 +45,9 @@ function App() {
         </Route>
         <Route exact path="/login">
           <Login />
+        </Route>
+        <Route exact path="/verify">
+          <Verify />
         </Route>
         <Route exact path="/register">
           <Register />

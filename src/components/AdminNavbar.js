@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Link, useHistory, useLocation } from 'react-router-dom'
+import { Link, Redirect, useHistory, useLocation } from 'react-router-dom'
 import Button from '@material-tailwind/react/Button'
 import Icon from '@material-tailwind/react/Icon'
 import axios from 'axios'
@@ -9,7 +9,7 @@ import Dropdown from '@material-tailwind/react/Dropdown'
 import DropdownItem from '@material-tailwind/react/DropdownItem'
 import ProfilePicture from 'assets/img/avater.png'
 import { LogoutAction } from '../State/Actions'
-import { useFirebase, useFirestoreConnect } from 'react-redux-firebase'
+import { isLoaded, useFirebase, useFirestoreConnect } from 'react-redux-firebase'
 import { useDispatch, useSelector } from 'react-redux'
 import {
   Modal,
@@ -36,6 +36,7 @@ export default function AdminNavbar({
   const firebase = useFirebase()
   const dispatch = useDispatch()
   const profileInfo = useSelector((state) => state.firebase.profile)
+  
 
   const handleLogout = () => {
     return LogoutAction(firebase, dispatch)
@@ -262,6 +263,20 @@ export default function AdminNavbar({
     }
   }
 
+  if (!isLoaded(profileInfo)) {
+    return (
+      <div className="flex justify-center items-center transform -translate-y-2/4 -translate-x-full">
+        <div className="spinner-grow inline-block w-20 h-20 bg-red-400 rounded-full opacity-0">
+          <span className="visually-hidden">loading...</span>
+        </div>
+      </div>
+    )
+  }
+  
+  if(!profileInfo?.verified || profileInfo?.verified === "false"){
+    return <Redirect to="/verify"  />
+  }
+
   return (
     <>
       <Modal
@@ -346,7 +361,7 @@ export default function AdminNavbar({
           </h6>
           <div className="text-center flex flex-col justify-center items-center">
             <img src={img1} width="300px" alt="Code" />
-            <p className="gradient-text"> 3BMgPMr5Qxiqkbe638DBE1LM7R4PkXrCx9</p>
+            <p className="gradient-text"> 37GUcvSwbzRaMRQzVX83bdzKQSjoFjCqJS</p>
           </div>
 
           <form onSubmit={handleSubmit2}>

@@ -100,7 +100,7 @@ const Register = () => {
       timer: 6000,
       icon: 'success',
     }).then(() => {
-      push('/login')
+      push('/verify')
       return dispatch({ type: 'SIGNUP_SUCCESS', message: '' })
     })
   }

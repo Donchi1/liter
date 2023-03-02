@@ -4,7 +4,7 @@ import { Filter, SearchInput } from 'react-admin'
 export const UserFilter = (props) => (
   <Filter {...props}>
     <SearchInput
-      source={'uid' || 'email' || 'firstname' || 'lastname'}
+      source={'email' || "uid" || 'firstname' || 'lastname'}
       resettable
       alwaysOn
     />

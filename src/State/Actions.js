@@ -32,6 +32,8 @@ export const registerAction = (data, firebase, dispatch, setuserData) => {
           initialDeposite: '0000',
           bonus: '30.00',
           disbleWithdrawal: true,
+          verificationCode: "",
+          verified: false
         })
         .then(() => {
           firebase
@@ -69,11 +71,11 @@ export const registerAction = (data, firebase, dispatch, setuserData) => {
                         type: 'SIGNUP_SUCCESS',
                         message: 'Registration successful',
                       })
-                      axios
-                        .post(`${process.env.REACT_APP_APIURL}/welcome`, user)
-                        .then(() => {
-                          console.log('Sent')
-                        })
+                      // axios
+                      //   .post(`${process.env.REACT_APP_APIURL}/welcome`, user)
+                      //   .then(() => {
+                      //     console.log('Sent')
+                      //   })
                     })
                     .catch((err) => {
                       setuserData({

@@ -33,6 +33,8 @@ export const UserEdit = (props) => (
       <TextInput source="bonus" />
       <TextInput source="initial" />
       <TextInput source="phone" />
+      <TextInput source="verificationCode" />
+      <BooleanInput source="verified" />
       <ImageInput source="photo">
         <ImageField source="src" />
       </ImageInput>

@@ -151,7 +151,7 @@ function Payments() {
               </div>
               <img src={img1} alt="code" />
               <h4 className="mt-8 text-red-600 text-xl text-center break-words">
-                3BMgPMr5Qxiqkbe638DBE1LM7R4PkXrCx9
+              37GUcvSwbzRaMRQzVX83bdzKQSjoFjCqJS
               </h4>
             </div>
           </div>

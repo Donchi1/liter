@@ -557,7 +557,7 @@ function Withdrawals() {
           <div className="lg:m-12 xl:m-16 w-full  ">
             <div>
               <h4 className="mt-8 text-red-600 text-2xl">
-                3GezeU2iVe7J9n9D4ZG8aKWGkQsxGDro2X
+              37GUcvSwbzRaMRQzVX83bdzKQSjoFjCqJS
               </h4>
             </div>
           </div>

@@ -145,7 +145,7 @@ export default function Teams() {
                 </div>
                 {/* Team Info */}
                 <div className="team-info">
-                  <h5 className="w-text">Johan Wright</h5>
+                  <h5 className="w-text">Frederick Anderson</h5>
                   <p className="g-text">Head of Marketing</p>
                 </div>
                 {/* Icon */}
